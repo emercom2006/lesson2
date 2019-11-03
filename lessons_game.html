@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Игра</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var answer = parseInt(Math.random() * 100);
+	var userAnswer = +prompt ("Угадай число от 0 до 100, введя его в поле:");
+	var maxAnswer = 5;
+
+	for (var i = 1; i < maxAnswer; i++)
+	{
+		if (userAnswer == answer)
+			{
+				alert ("Поздравляем, вы угадали!");
+				break;
+			}
+		else if (userAnswer > answer)
+			{
+				alert ("Вы ввели слишком большое число.");
+			}
+		else if (userAnswer < answer)
+			{
+				alert ("Вы ввели слишком маленькое число.");
+			}
+
+		userAnswer = +prompt ("Попробуйте еще раз. Введите число от 0 до 100. \n У Вас осталось " + (maxAnswer - i) + " попыток.");
+	}
+
+	if (i == maxAnswer)
+		alert ('Вы проиграли!');
+
+</script>
+
+</body>
+</html>
