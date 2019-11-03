@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Игра</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var answer1 = 5; // ответ на загадку №1
+	var answer2 = 9; // ответ на загадку №2
+	var answer3 = 4; // ответ на загадку №3
+	var answer4 = 1; // ответ на загадку №4
+	var question1 = "Угадайте загадку, ответ введите цифрой. \nЕсли ДВА перевернуть \nИ внимательно взглянуть, \nТак и сяк взглянуть опять,\nТо получим цифру:"; // текст загадки №1
+	var question2 = ("Цифра шесть перевернулась, \nНовой цифрой обернулась"); // текст загадки №2
+	var question3 = ("Кто-то ночью старый стул \nСпинкой вниз перевернул. \nИ теперь у нас в квартире \nСтал он цифрою ..."); // текст загадки №3
+	var question4 = ("С хитрым носиком сестрица \nСчёт откроет ..."); // текст загадки №4
+	var maxAnswer = 7 // максимальное число ответов
+
+	var userAnswer = +prompt (question1); // запрашиваем ответ от пользователя
+	for (var i = 1; i < maxAnswer; i++) // цикл
+	{
+		if (userAnswer == answer1)
+			{
+				var a = 1;
+				alert ("Поздравляем, вы угадали!"); 
+			break;	// при правильном ответе выходим из цикла
+			}
+		if (userAnswer != answer1)
+			{
+				userAnswer = +prompt ("Вы не угадали. Попробуйте еще раз. \nУ Вас осталось " + (maxAnswer - i) + " попыток.\n" + question1);  // при не правильном ответе
+			}
+	}
+
+	if (i = maxAnswer && userAnswer == answer1)
+		alert ('Отгадайте следующую загадку'); // если окончились попытки на правильном ответе
+	if (i < maxAnswer && userAnswer != answer1) var a = 0;
+		
+
+var userAnswer2 = +prompt (question2); // запрашиваем ответ от пользователя
+		for (var i = 1; i < maxAnswer; i++) // цикл
+	{
+		if (userAnswer2 == answer2)
+			{	
+				var b = 1;
+				alert ("Поздравляем, вы угадали!");
+				break; // при правильном ответе выходим из цикла
+			}
+
+		if (userAnswer2 != answer2)
+			{
+				userAnswer2 = +prompt ("Вы не угадали. Попробуйте еще раз. \nУ Вас осталось " + (maxAnswer - i) + " попыток.\n" + question2);  // при не правильном ответе
+			}
+	}
+
+	if (i = maxAnswer && userAnswer2 == answer2)
+		alert ('Отгадайте следующую загадку'); // если окончились попытки на правильном ответе
+	if (i < maxAnswer && userAnswer2 != answer2)  var b = 0;
+		
+
+var userAnswer3 = +prompt (question3); // запрашиваем ответ от пользователя
+		for (var i = 1; i < maxAnswer; i++) // цикл
+	{
+		if (userAnswer3 == answer3)
+			{
+				var c = 1;
+				alert ("Поздравляем, вы угадали!");
+				break; // при правильном ответе выходим из цикла
+			}
+
+		if (userAnswer3 != answer3)
+			{
+				userAnswer3 = +prompt ("Вы не угадали. Попробуйте еще раз. \nУ Вас осталось " + (maxAnswer - i) + " попыток.\n" + question3); // при не правильном ответе
+			}
+	}
+
+		if (i = maxAnswer && userAnswer3 == answer3)
+		alert ('Отгадайте следующую загадку'); // если окончились попытки на правильном ответе
+	if (i < maxAnswer && userAnswer3 != answer3)  var c = 0;
+		
+
+	var userAnswer4 = +prompt (question4); // запрашиваем ответ от пользователя
+		for (var i = 1; i < maxAnswer; i++) // цикл
+	{
+		if (userAnswer4 == answer4)
+			{
+				var d = 1;
+				alert ("Поздравляем, вы угадали! и правильно ответили на " + (a + b + c + d) + " загадки");
+				break; // при правильном ответе выходим из цикла
+			}
+
+		if (userAnswer4 != answer4)
+			{
+				userAnswer3 = +prompt ("Вы не угадали. Попробуйте еще раз. \nУ Вас осталось " + (maxAnswer - i) + " попыток.\n" + question4); // при не правильном ответе
+			}
+	}
+
+		if (i = maxAnswer && userAnswer4 == answer4)
+		alert ('Отгадайте следующую загадку'); // если окончились попытки на правильном ответе
+	if (i < maxAnswer && userAnswer4 != answer4)  var d = 0;
+		alert ("Поздравляем, вы правильно ответили на " + (a + b + c + d) + " загадки");
+
+
+
+</script>
+
+</body>
+</html>
